@@ -1,0 +1,27 @@
+Level,Code,Name,Kind,Qty per parent,Extended qty,Unit cost,Line cost,Extended cost,Build minutes
+0,SA2006,Robot arm unit,Assembly,1.00,1.00,344.76,344.76,344.76,75.0
+1,RBT1001,Robot arm mechanism,Component,1.00,1.0000,340.00,340.00,340.00,0
+1,MET1001,Steel base plate,Component,1.00,1.0000,4.40,4.40,4.40,0
+1,FAS1001,M3 x 8 socket screw,Component,12.00,12.0000,0.03,0.36,0.36,0
+0,SA2003,Control panel assembly,Assembly,1.00,1.00,323.82,323.82,323.82,115.0
+1,ELE1010,PLC controller,Component,1.00,1.0000,120.00,120.00,120.00,0
+1,ELE1011,7 inch touch panel,Component,1.00,1.0000,180.00,180.00,180.00,0
+1,ELE1009,MCB 1 pole 6A,Component,1.00,1.0000,6.50,6.50,6.50,0
+1,ELE1008,Emergency stop button,Component,1.00,1.0000,8.50,8.50,8.50,0
+1,ELE1004,Terminal block 2-way,Component,12.00,12.0000,0.25,3.00,3.00,0
+1,SA2008,Controller board assembly,Assembly,1.00,1.0000,5.62,5.62,5.62,43.0
+2,PCB1001,Controller PCB blank,Component,1.00,1.000000,1.20,1.20,1.20,0
+2,PCB1003,Microcontroller,Component,1.00,1.000000,2.60,2.60,2.60,0
+2,PCB1004,Resistor 10k 0603,Component,12.00,12.000000,0.02,0.24,0.24,0
+2,PCB1005,Capacitor 10uF 0603,Component,4.00,4.000000,0.06,0.24,0.24,0
+2,PCB1006,Voltage regulator 5V,Component,1.00,1.000000,0.34,0.34,0.34,0
+2,ELE1004,Terminal block 2-way,Component,4.00,4.000000,0.25,1.00,1.00,0
+1,FAS1006,Cable tie 100mm,Component,10.00,10.0000,0.02,0.20,0.20,0
+0,SA2007,Base frame,Assembly,1.00,1.00,32.96,32.96,32.96,48.0
+1,MET1002,Aluminium extrusion 30 x 30 x 500,Component,4.00,4.0000,6.50,26.00,26.00,0
+1,MET1001,Steel base plate,Component,1.00,1.0000,4.40,4.40,4.40,0
+1,FAS1002,M4 x 10 socket screw,Component,12.00,12.0000,0.04,0.48,0.48,0
+1,FAS1004,T-slot nut,Component,8.00,8.0000,0.12,0.96,0.96,0
+1,MET1003,Mounting bracket,Component,4.00,4.0000,0.28,1.12,1.12,0
+0,ELE1003,24V power supply 60W,Component,1.00,1.00,14.50,14.50,14.50,0
+0,MET1002,Aluminium extrusion 30 x 30 x 500,Component,6.00,6.00,6.50,39.00,39.00,0

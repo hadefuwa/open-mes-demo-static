@@ -1,0 +1,5 @@
+Level,Code,Name,Kind,Qty per parent,Extended qty,Unit cost,Line cost,Extended cost,Build minutes
+0,ELE1007,Proximity sensor,Component,1.00,1.00,12.40,12.40,12.40,0
+0,PLA1002,Sensor holder (3D printed),Component,1.00,1.00,0.65,0.65,0.65,0
+0,PLA1001,Acrylic cover,Component,1.00,1.00,0.80,0.80,0.80,0
+0,FAS1001,M3 x 8 socket screw,Component,4.00,4.00,0.03,0.12,0.12,0

@@ -1,0 +1,166 @@
+ID,Timestamp,Work Order,Unit,Action,Detail,Source
+165,2026-10-09T11:30:42+00:00,1103,,sent to QA,,operator
+164,2026-10-09T08:09:42+00:00,1103,SA2007-0012,unit recorded,pass,operator
+163,2026-10-09T07:44:42+00:00,1103,SA2007-0011,unit recorded,pass,operator
+162,2026-10-09T07:31:42+00:00,1103,SA2007-0010,unit recorded,pass,operator
+161,2026-10-09T07:28:42+00:00,1103,SA2007-0009,unit retested,pass,operator
+160,2026-10-09T07:16:42+00:00,1103,SA2007-0009,unit recorded,rework: Failed pressure test,operator
+159,2026-10-09T07:04:42+00:00,1103,SA2007-0008,unit recorded,pass,operator
+158,2026-10-09T06:50:42+00:00,1103,,started,,operator
+157,2026-10-09T09:48:42+00:00,1102,SA2001-0014,unit recorded,pass,operator
+156,2026-10-09T09:37:42+00:00,1102,SA2001-0013,unit recorded,pass,operator
+155,2026-10-09T09:27:42+00:00,1102,SA2001-0012,unit recorded,pass,operator
+154,2026-10-09T09:10:42+00:00,1102,SA2001-0011,unit recorded,pass,operator
+153,2026-10-09T08:50:42+00:00,1102,,started,,operator
+152,2026-10-08T10:05:00+00:00,1082,,"QA approved, completed",,operator
+151,2026-10-08T09:40:00+00:00,1082,,sent to QA,,operator
+150,2026-10-08T09:35:00+00:00,1082,SA2004-0018,unit recorded,pass,operator
+149,2026-10-08T09:17:00+00:00,1082,SA2004-0017,unit recorded,pass,operator
+148,2026-10-08T09:01:00+00:00,1082,SA2004-0016,unit recorded,pass,operator
+147,2026-10-08T08:37:00+00:00,1082,,started,,operator
+146,2026-10-07T09:48:00+00:00,1083,,"QA approved, completed",,operator
+145,2026-10-07T09:23:00+00:00,1083,,sent to QA,,operator
+144,2026-10-07T09:18:00+00:00,1083,SA2004-0015,unit recorded,pass,operator
+143,2026-10-07T09:03:00+00:00,1083,SA2004-0014,unit recorded,pass,operator
+142,2026-10-07T08:48:00+00:00,1083,SA2004-0013,unit recorded,pass,operator
+141,2026-10-07T08:38:00+00:00,1083,,started,,operator
+140,2026-10-07T09:46:00+00:00,1084,,"QA approved, completed",,operator
+139,2026-10-07T09:21:00+00:00,1084,,sent to QA,,operator
+138,2026-10-07T09:16:00+00:00,1084,SA2007-0007,unit recorded,pass,operator
+137,2026-10-07T08:52:00+00:00,1084,SA2007-0006,unit recorded,pass,operator
+136,2026-10-07T08:29:00+00:00,1084,SA2007-0005,unit recorded,pass,operator
+135,2026-10-07T08:20:00+00:00,1084,,started,,operator
+134,2026-10-06T10:59:00+00:00,1085,,"QA approved, completed",,operator
+133,2026-10-06T10:34:00+00:00,1085,,sent to QA,,operator
+132,2026-10-06T10:29:00+00:00,1085,SA2008-0036,unit recorded,pass,operator
+131,2026-10-06T10:06:00+00:00,1085,SA2008-0035,unit recorded,pass,operator
+130,2026-10-06T09:41:00+00:00,1085,SA2008-0034,unit recorded,pass,operator
+129,2026-10-06T09:19:00+00:00,1085,SA2008-0033,unit recorded,rework: Loose connection,operator
+128,2026-10-06T09:23:00+00:00,1085,SA2008-0032,unit retested,pass,operator
+127,2026-10-06T09:11:00+00:00,1085,SA2008-0032,unit recorded,rework: Loose connection,operator
+126,2026-10-06T08:51:00+00:00,1085,SA2008-0031,unit recorded,pass,operator
+125,2026-10-06T08:28:00+00:00,1085,SA2008-0030,unit recorded,pass,operator
+124,2026-10-06T08:15:00+00:00,1085,,started,,operator
+123,2026-10-06T10:31:00+00:00,1086,,"QA approved, completed",,operator
+122,2026-10-06T10:06:00+00:00,1086,,sent to QA,,operator
+121,2026-10-06T10:01:00+00:00,1086,SA2005-0012,unit recorded,pass,operator
+120,2026-10-06T09:36:00+00:00,1086,SA2005-0011,unit recorded,pass,operator
+119,2026-10-06T09:26:00+00:00,1086,SA2005-0010,unit recorded,pass,operator
+118,2026-10-06T09:10:00+00:00,1086,SA2005-0009,unit recorded,pass,operator
+117,2026-10-06T08:58:00+00:00,1086,SA2005-0008,unit recorded,pass,operator
+116,2026-10-06T08:44:00+00:00,1086,SA2005-0007,unit recorded,pass,operator
+115,2026-10-06T08:33:00+00:00,1086,SA2005-0006,unit recorded,pass,operator
+114,2026-10-06T08:15:00+00:00,1086,SA2005-0005,unit recorded,pass,operator
+113,2026-10-06T08:06:00+00:00,1086,,started,,operator
+112,2026-10-05T10:27:00+00:00,1087,,"QA approved, completed",,operator
+111,2026-10-05T10:02:00+00:00,1087,,sent to QA,,operator
+110,2026-10-05T09:57:00+00:00,1087,SA2005-0004,unit recorded,pass,operator
+109,2026-10-05T09:36:00+00:00,1087,SA2005-0003,unit recorded,pass,operator
+108,2026-10-05T09:22:00+00:00,1087,SA2005-0002,unit recorded,pass,operator
+107,2026-10-05T08:59:00+00:00,1087,SA2005-0001,unit recorded,pass,operator
+106,2026-10-05T08:36:00+00:00,1087,,started,,operator
+105,2026-10-05T10:44:00+00:00,1088,,"QA approved, completed",,operator
+104,2026-10-05T10:19:00+00:00,1088,,sent to QA,,operator
+103,2026-10-05T10:14:00+00:00,1088,SA2008-0029,unit recorded,pass,operator
+102,2026-10-05T10:11:00+00:00,1088,SA2008-0028,unit retested,pass,operator
+101,2026-10-05T09:59:00+00:00,1088,SA2008-0028,unit recorded,rework: Loose connection,operator
+100,2026-10-05T09:50:00+00:00,1088,SA2008-0027,unit recorded,pass,operator
+99,2026-10-05T09:41:00+00:00,1088,SA2008-0026,unit recorded,pass,operator
+98,2026-10-05T09:33:00+00:00,1088,SA2008-0025,unit recorded,pass,operator
+97,2026-10-05T09:18:00+00:00,1088,SA2008-0024,unit recorded,pass,operator
+96,2026-10-05T09:10:00+00:00,1088,SA2008-0023,unit recorded,pass,operator
+95,2026-10-05T08:55:00+00:00,1088,SA2008-0022,unit recorded,pass,operator
+94,2026-10-05T08:33:00+00:00,1088,,started,,operator
+93,2026-10-02T10:17:00+00:00,1089,,"QA approved, completed",,operator
+92,2026-10-02T09:52:00+00:00,1089,,sent to QA,,operator
+91,2026-10-02T09:47:00+00:00,1089,SA2004-0012,unit recorded,pass,operator
+90,2026-10-02T09:45:00+00:00,1089,SA2004-0011,unit retested,pass,operator
+89,2026-10-02T09:33:00+00:00,1089,SA2004-0011,unit recorded,rework: Wrong fastener fitted,operator
+88,2026-10-02T09:31:00+00:00,1089,SA2004-0010,unit retested,pass,operator
+87,2026-10-02T09:19:00+00:00,1089,SA2004-0010,unit recorded,rework: Solder bridge on PCB,operator
+86,2026-10-02T08:55:00+00:00,1089,SA2004-0009,unit recorded,pass,operator
+85,2026-10-02T08:30:00+00:00,1089,,started,,operator
+84,2026-10-02T09:27:00+00:00,1090,,"QA approved, completed",,operator
+83,2026-10-02T09:02:00+00:00,1090,,sent to QA,,operator
+82,2026-10-02T08:57:00+00:00,1090,SA2001-0010,unit recorded,pass,operator
+81,2026-10-02T08:34:00+00:00,1090,SA2001-0009,unit recorded,pass,operator
+80,2026-10-02T08:24:00+00:00,1090,SA2001-0008,unit recorded,pass,operator
+79,2026-10-02T08:15:00+00:00,1090,,started,,operator
+78,2026-10-01T09:53:00+00:00,1091,,"QA approved, completed",,operator
+77,2026-10-01T09:28:00+00:00,1091,,sent to QA,,operator
+76,2026-10-01T09:35:00+00:00,1091,SA2004-0008,unit retested,pass,operator
+75,2026-10-01T09:23:00+00:00,1091,SA2004-0008,unit recorded,rework: Scratched panel,operator
+74,2026-10-01T08:59:00+00:00,1091,SA2004-0007,unit recorded,pass,operator
+73,2026-10-01T08:46:00+00:00,1091,SA2004-0006,unit recorded,pass,operator
+72,2026-10-01T08:32:00+00:00,1091,,started,,operator
+71,2026-10-01T10:05:00+00:00,1092,,"QA approved, completed",,operator
+70,2026-10-01T09:40:00+00:00,1092,,sent to QA,,operator
+69,2026-10-01T09:35:00+00:00,1092,SA2004-0005,unit recorded,rework: Wrong fastener fitted,operator
+68,2026-10-01T09:19:00+00:00,1092,SA2004-0004,unit recorded,rework: Failed pressure test,operator
+67,2026-10-01T09:11:00+00:00,1092,SA2004-0003,unit recorded,pass,operator
+66,2026-10-01T08:50:00+00:00,1092,SA2004-0002,unit recorded,pass,operator
+65,2026-10-01T08:32:00+00:00,1092,SA2004-0001,unit recorded,pass,operator
+64,2026-10-01T08:07:00+00:00,1092,,started,,operator
+63,2026-09-30T09:38:00+00:00,1093,,"QA approved, completed",,operator
+62,2026-09-30T09:13:00+00:00,1093,,sent to QA,,operator
+61,2026-09-30T09:08:00+00:00,1093,SA2007-0004,unit recorded,pass,operator
+60,2026-09-30T08:48:00+00:00,1093,SA2007-0003,unit recorded,pass,operator
+59,2026-09-30T08:27:00+00:00,1093,SA2007-0002,unit recorded,pass,operator
+58,2026-09-30T08:14:00+00:00,1093,SA2007-0001,unit recorded,pass,operator
+57,2026-09-30T08:03:00+00:00,1093,,started,,operator
+56,2026-09-30T10:12:00+00:00,1094,,"QA approved, completed",,operator
+55,2026-09-30T09:47:00+00:00,1094,,sent to QA,,operator
+54,2026-09-30T09:54:00+00:00,1094,SA2002-0004,unit retested,pass,operator
+53,2026-09-30T09:42:00+00:00,1094,SA2002-0004,unit recorded,rework: Solder bridge on PCB,operator
+52,2026-09-30T09:21:00+00:00,1094,SA2002-0003,unit recorded,pass,operator
+51,2026-09-30T08:56:00+00:00,1094,SA2002-0002,unit recorded,pass,operator
+50,2026-09-30T08:41:00+00:00,1094,SA2002-0001,unit recorded,pass,operator
+49,2026-09-30T08:29:00+00:00,1094,,started,,operator
+48,2026-09-29T11:30:00+00:00,1095,,"QA approved, completed",,operator
+47,2026-09-29T11:05:00+00:00,1095,,sent to QA,,operator
+46,2026-09-29T11:12:00+00:00,1095,SA2008-0021,unit retested,pass,operator
+45,2026-09-29T11:00:00+00:00,1095,SA2008-0021,unit recorded,rework: Scratched panel,operator
+44,2026-09-29T10:46:00+00:00,1095,SA2008-0020,unit recorded,pass,operator
+43,2026-09-29T10:38:00+00:00,1095,SA2008-0019,unit retested,pass,operator
+42,2026-09-29T10:26:00+00:00,1095,SA2008-0019,unit recorded,rework: Wrong fastener fitted,operator
+41,2026-09-29T10:23:00+00:00,1095,SA2008-0018,unit retested,pass,operator
+40,2026-09-29T10:11:00+00:00,1095,SA2008-0018,unit recorded,rework: Wrong fastener fitted,operator
+39,2026-09-29T09:53:00+00:00,1095,SA2008-0017,unit recorded,pass,operator
+38,2026-09-29T09:28:00+00:00,1095,SA2008-0016,unit recorded,pass,operator
+37,2026-09-29T09:08:00+00:00,1095,SA2008-0015,unit recorded,pass,operator
+36,2026-09-29T08:53:00+00:00,1095,SA2008-0014,unit recorded,pass,operator
+35,2026-09-29T08:40:00+00:00,1095,,started,,operator
+34,2026-09-29T10:31:00+00:00,1096,,"QA approved, completed",,operator
+33,2026-09-29T10:06:00+00:00,1096,,sent to QA,,operator
+32,2026-09-29T10:01:00+00:00,1096,SA2008-0013,unit recorded,pass,operator
+31,2026-09-29T09:45:00+00:00,1096,SA2008-0012,unit recorded,pass,operator
+30,2026-09-29T09:26:00+00:00,1096,SA2008-0011,unit recorded,pass,operator
+29,2026-09-29T09:07:00+00:00,1096,SA2008-0010,unit recorded,pass,operator
+28,2026-09-29T08:59:00+00:00,1096,SA2008-0009,unit retested,pass,operator
+27,2026-09-29T08:47:00+00:00,1096,SA2008-0009,unit recorded,rework: Failed pressure test,operator
+26,2026-09-29T08:37:00+00:00,1096,SA2008-0008,unit recorded,pass,operator
+25,2026-09-29T08:22:00+00:00,1096,SA2008-0007,unit recorded,pass,operator
+24,2026-09-29T08:12:00+00:00,1096,,started,,operator
+23,2026-09-28T10:16:00+00:00,1097,,"QA approved, completed",,operator
+22,2026-09-28T09:51:00+00:00,1097,,sent to QA,,operator
+21,2026-09-28T09:46:00+00:00,1097,SA2008-0006,unit recorded,pass,operator
+20,2026-09-28T09:26:00+00:00,1097,SA2008-0005,unit recorded,pass,operator
+19,2026-09-28T09:01:00+00:00,1097,SA2008-0004,unit recorded,pass,operator
+18,2026-09-28T09:04:00+00:00,1097,SA2008-0003,unit retested,pass,operator
+17,2026-09-28T08:52:00+00:00,1097,SA2008-0003,unit recorded,rework: Scratched panel,operator
+16,2026-09-28T08:33:00+00:00,1097,SA2008-0002,unit recorded,pass,operator
+15,2026-09-28T08:23:00+00:00,1097,SA2008-0001,unit recorded,rework: Solder bridge on PCB,operator
+14,2026-09-28T08:09:00+00:00,1097,,started,,operator
+13,2026-09-25T10:11:00+00:00,1098,,"QA approved, completed",,operator
+12,2026-09-25T09:46:00+00:00,1098,,sent to QA,,operator
+11,2026-09-25T09:41:00+00:00,1098,SA2001-0007,unit recorded,pass,operator
+10,2026-09-25T09:33:00+00:00,1098,SA2001-0006,unit recorded,pass,operator
+9,2026-09-25T09:11:00+00:00,1098,SA2001-0005,unit recorded,pass,operator
+8,2026-09-25T08:46:00+00:00,1098,SA2001-0004,unit recorded,pass,operator
+7,2026-09-25T08:38:00+00:00,1098,,started,,operator
+6,2026-09-25T09:42:00+00:00,1099,,"QA approved, completed",,operator
+5,2026-09-25T09:17:00+00:00,1099,,sent to QA,,operator
+4,2026-09-25T09:12:00+00:00,1099,SA2001-0003,unit recorded,pass,operator
+3,2026-09-25T08:51:00+00:00,1099,SA2001-0002,unit recorded,pass,operator
+2,2026-09-25T08:26:00+00:00,1099,SA2001-0001,unit recorded,pass,operator
+1,2026-09-25T08:14:00+00:00,1099,,started,,operator

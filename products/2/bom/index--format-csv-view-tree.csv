@@ -1,0 +1,18 @@
+Level,Code,Name,Kind,Qty per parent,Extended qty,Unit cost,Line cost,Extended cost,Build minutes
+0,SA2004,Valve block,Assembly,1.00,1.00,37.56,37.56,37.56,18.0
+1,PNE1002,Solenoid valve 5/2,Component,3.00,3.0000,11.00,33.00,33.00,0
+1,PNE1004,Push-in fitting 4mm,Component,8.00,8.0000,0.40,3.20,3.20,0
+1,PNE1003,Tubing 4mm (per metre),Component,2.00,2.0000,0.60,1.20,1.20,0
+1,FAS1002,M4 x 10 socket screw,Component,4.00,4.0000,0.04,0.16,0.16,0
+0,SA2007,Base frame,Assembly,1.00,1.00,32.96,32.96,32.96,48.0
+1,MET1002,Aluminium extrusion 30 x 30 x 500,Component,4.00,4.0000,6.50,26.00,26.00,0
+1,MET1001,Steel base plate,Component,1.00,1.0000,4.40,4.40,4.40,0
+1,FAS1002,M4 x 10 socket screw,Component,12.00,12.0000,0.04,0.48,0.48,0
+1,FAS1004,T-slot nut,Component,8.00,8.0000,0.12,0.96,0.96,0
+1,MET1003,Mounting bracket,Component,4.00,4.0000,0.28,1.12,1.12,0
+0,PNE1001,Pneumatic cylinder 10 x 40,Component,2.00,2.00,6.50,13.00,13.00,0
+0,PNE1005,Vacuum cup 16mm,Component,1.00,1.00,1.40,1.40,1.40,0
+0,ELE1003,24V power supply 60W,Component,1.00,1.00,14.50,14.50,14.50,0
+0,ELE1005,Push-button switch,Component,4.00,4.00,1.10,4.40,4.40,0
+0,CBL1001,Lead 4mm red 500mm,Component,4.00,4.00,0.90,3.60,3.60,0
+0,CBL1002,Lead 4mm black 500mm,Component,4.00,4.00,0.90,3.60,3.60,0

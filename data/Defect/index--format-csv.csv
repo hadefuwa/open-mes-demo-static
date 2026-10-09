@@ -1,0 +1,46 @@
+ID,Created At,Updated At,Occurred At,Product,Component,Work Order,Unit,Quantity,Unit Cost,Description,Reported By
+45,2026-09-04T10:59:00+00:00,2026-09-04T10:59:00+00:00,2026-09-04T10:59:00+00:00,SA2008 - Controller board assembly,,1095,SA2008-0017,1,25.69,"Wrong firmware, board damaged on reflash",Jordan
+44,2026-09-30T11:16:00+00:00,2026-09-30T11:16:00+00:00,2026-09-30T11:16:00+00:00,SA2001 - Conveyor frame assembly,MET1003 - Mounting bracket,1098,,12,0.28,PCB mis-fit in housing,Jordan
+43,2026-09-16T13:43:00+00:00,2026-09-16T13:43:00+00:00,2026-09-16T13:43:00+00:00,SA2001 - Conveyor frame assembly,MEC1004 - Ball bearing 608,1133,SA2001-1133-01,1,0.35,Cracked acrylic on fitting,Sam
+42,2026-10-07T15:56:00+00:00,2026-10-07T15:56:00+00:00,2026-10-07T15:56:00+00:00,SA2008 - Controller board assembly,ELE1004 - Terminal block 2-way,1095,,8,0.25,PCB mis-fit in housing,Jordan
+41,2026-09-03T11:30:00+00:00,2026-09-03T11:30:00+00:00,2026-09-03T11:30:00+00:00,SA2003 - Control panel assembly,ELE1010 - PLC controller,1132,,1,120.00,Dropped during handling,Jordan
+40,2026-09-26T11:50:00+00:00,2026-09-26T11:50:00+00:00,2026-09-26T11:50:00+00:00,SA2005 - Sensor head,,1087,,1,33.10,Water damage in storage,Jordan
+39,2026-09-19T12:08:00+00:00,2026-09-19T12:08:00+00:00,2026-09-19T12:08:00+00:00,SA2001 - Conveyor frame assembly,FAS1004 - T-slot nut,1098,,1,0.12,Wrong screw fitted,Jordan
+38,2026-09-17T15:05:00+00:00,2026-09-17T15:05:00+00:00,2026-09-17T15:05:00+00:00,SA2008 - Controller board assembly,,1097,SA2008-0001,1,25.69,"Failed final test, unrecoverable",Sam
+37,2026-09-30T09:14:00+00:00,2026-09-30T09:14:00+00:00,2026-09-30T09:14:00+00:00,SA2002 - Drive motor unit,,1104,,1,41.54,"Wrong firmware, board damaged on reflash",Jordan
+36,2026-09-02T15:00:00+00:00,2026-09-02T15:00:00+00:00,2026-09-02T15:00:00+00:00,SA2005 - Sensor head,,1105,,1,33.10,"Wrong firmware, board damaged on reflash",Jordan
+35,2026-10-04T11:24:00+00:00,2026-10-04T11:24:00+00:00,2026-10-04T11:24:00+00:00,SA2008 - Controller board assembly,ELE1004 - Terminal block 2-way,1088,SA2008-0029,1,0.25,PCB mis-fit in housing,Sam
+34,2026-09-27T16:13:00+00:00,2026-09-27T16:13:00+00:00,2026-09-27T16:13:00+00:00,SA2007 - Base frame,FAS1004 - T-slot nut,1103,SA2007-0010,6,0.12,Laser cut out of tolerance,Sam
+33,2026-09-22T13:15:00+00:00,2026-09-22T13:15:00+00:00,2026-09-22T13:15:00+00:00,SA2001 - Conveyor frame assembly,,1099,SA2001-0003,1,31.84,"Failed pressure test, unit scrapped",Alex
+32,2026-09-07T15:35:00+00:00,2026-09-07T15:35:00+00:00,2026-09-07T15:35:00+00:00,SA2008 - Controller board assembly,PCB1001 - Controller PCB blank,1097,SA2008-0003,2,1.20,PCB mis-fit in housing,Sam
+31,2026-09-29T12:25:00+00:00,2026-09-29T12:25:00+00:00,2026-09-29T12:25:00+00:00,SA2001 - Conveyor frame assembly,FAS1004 - T-slot nut,1099,,8,0.12,Cracked acrylic on fitting,Alex
+30,2026-09-19T12:31:00+00:00,2026-09-19T12:31:00+00:00,2026-09-19T12:31:00+00:00,SA2004 - Valve block,,1092,SA2004-0005,1,45.96,Housing cracked during assembly,Jordan
+29,2026-09-07T16:35:00+00:00,2026-09-07T16:35:00+00:00,2026-09-07T16:35:00+00:00,SA2001 - Conveyor frame assembly,,1125,SA2001-1125-01,1,31.84,Housing cracked during assembly,Alex
+28,2026-09-19T10:15:00+00:00,2026-09-19T10:15:00+00:00,2026-09-19T10:15:00+00:00,SA2004 - Valve block,FAS1002 - M4 x 10 socket screw,1083,,6,0.04,Bent pin on connector,Alex
+27,2026-10-05T14:55:00+00:00,2026-10-05T14:55:00+00:00,2026-10-05T14:55:00+00:00,SA2001 - Conveyor frame assembly,MEC1004 - Ball bearing 608,1099,SA2001-0002,1,0.35,Solder bridge on pads,Alex
+26,2026-09-28T13:00:00+00:00,2026-09-28T13:00:00+00:00,2026-09-28T13:00:00+00:00,SA2001 - Conveyor frame assembly,FAS1001 - M3 x 8 socket screw,1099,SA2001-0002,3,0.03,Dropped during handling,Alex
+25,2026-09-26T10:00:00+00:00,2026-09-26T10:00:00+00:00,2026-09-26T10:00:00+00:00,FG1002 - Pneumatics Trainer,MET1002 - Aluminium extrusion 30 x 30 x 500,1115,,1,6.50,Cracked acrylic on fitting,Alex
+24,2026-09-30T13:08:00+00:00,2026-09-30T13:08:00+00:00,2026-09-30T13:08:00+00:00,SA2008 - Controller board assembly,ELE1004 - Terminal block 2-way,1097,,1,0.25,PCB mis-fit in housing,Sam
+23,2026-09-29T09:52:00+00:00,2026-09-29T09:52:00+00:00,2026-09-29T09:52:00+00:00,SA2001 - Conveyor frame assembly,FAS1004 - T-slot nut,1099,SA2001-0002,3,0.12,Solder bridge on pads,Alex
+22,2026-09-29T15:29:00+00:00,2026-09-29T15:29:00+00:00,2026-09-29T15:29:00+00:00,SA2004 - Valve block,PNE1004 - Push-in fitting 4mm,1130,,3,0.40,Solder bridge on pads,Alex
+21,2026-09-28T12:39:00+00:00,2026-09-28T12:39:00+00:00,2026-09-28T12:39:00+00:00,SA2001 - Conveyor frame assembly,FAS1004 - T-slot nut,1098,SA2001-0004,1,0.12,Dry joint found at test,Jordan
+20,2026-10-04T12:49:00+00:00,2026-10-04T12:49:00+00:00,2026-10-04T12:49:00+00:00,FG1004 - Motor Control Kit,,1114,,1,129.53,"Failed final test, unrecoverable",Sam
+19,2026-09-30T09:54:00+00:00,2026-09-30T09:54:00+00:00,2026-09-30T09:54:00+00:00,SA2005 - Sensor head,FAS1001 - M3 x 8 socket screw,1105,,3,0.03,PCB mis-fit in housing,Jordan
+18,2026-09-18T15:16:00+00:00,2026-09-18T15:16:00+00:00,2026-09-18T15:16:00+00:00,SA2008 - Controller board assembly,PCB1001 - Controller PCB blank,1097,SA2008-0001,1,1.20,Cracked acrylic on fitting,Sam
+17,2026-10-04T08:08:00+00:00,2026-10-04T08:08:00+00:00,2026-10-04T08:08:00+00:00,SA2008 - Controller board assembly,PCB1001 - Controller PCB blank,1085,,12,1.20,Dry joint found at test,Alex
+16,2026-09-12T16:40:00+00:00,2026-09-12T16:40:00+00:00,2026-09-12T16:40:00+00:00,SA2008 - Controller board assembly,ELE1004 - Terminal block 2-way,1097,SA2008-0006,1,0.25,Failed continuity check,Sam
+15,2026-09-18T14:48:00+00:00,2026-09-18T14:48:00+00:00,2026-09-18T14:48:00+00:00,SA2004 - Valve block,,1089,SA2004-0012,1,45.96,"Wrong firmware, board damaged on reflash",Jordan
+14,2026-10-04T09:09:00+00:00,2026-10-04T09:09:00+00:00,2026-10-04T09:09:00+00:00,SA2001 - Conveyor frame assembly,FAS1001 - M3 x 8 socket screw,1098,SA2001-0004,3,0.03,Laser cut out of tolerance,Jordan
+13,2026-09-02T12:13:00+00:00,2026-09-02T12:13:00+00:00,2026-09-02T12:13:00+00:00,SA2001 - Conveyor frame assembly,FAS1001 - M3 x 8 socket screw,1098,SA2001-0004,4,0.03,PCB mis-fit in housing,Jordan
+12,2026-09-20T12:02:00+00:00,2026-09-20T12:02:00+00:00,2026-09-20T12:02:00+00:00,SA2004 - Valve block,FAS1002 - M4 x 10 socket screw,1083,SA2004-0013,6,0.04,Cosmetic scratch on panel,Alex
+11,2026-08-31T10:00:00+00:00,2026-08-31T10:00:00+00:00,2026-08-31T10:00:00+00:00,SA2001 - Conveyor frame assembly,FAS1004 - T-slot nut,1099,SA2001-0003,1,0.12,PCB mis-fit in housing,Alex
+10,2026-09-11T14:32:00+00:00,2026-09-11T14:32:00+00:00,2026-09-11T14:32:00+00:00,FG1005 - Robot Arm Cell,ELE1004 - Terminal block 2-way,1116,,3,0.25,Cracked acrylic on fitting,Jordan
+9,2026-10-07T16:35:00+00:00,2026-10-07T16:35:00+00:00,2026-10-07T16:35:00+00:00,SA2008 - Controller board assembly,ELE1004 - Terminal block 2-way,1097,,12,0.25,PCB mis-fit in housing,Sam
+8,2026-10-01T12:40:00+00:00,2026-10-01T12:40:00+00:00,2026-10-01T12:40:00+00:00,SA2001 - Conveyor frame assembly,FAS1004 - T-slot nut,1098,SA2001-0005,2,0.12,Solder bridge on pads,Jordan
+7,2026-09-25T13:35:00+00:00,2026-09-25T13:35:00+00:00,2026-09-25T13:35:00+00:00,SA2001 - Conveyor frame assembly,FAS1001 - M3 x 8 socket screw,1098,SA2001-0006,3,0.03,Wrong screw fitted,Jordan
+6,2026-09-29T08:40:00+00:00,2026-09-29T08:40:00+00:00,2026-09-29T08:40:00+00:00,SA2001 - Conveyor frame assembly,,1098,SA2001-0006,1,31.84,"Failed final test, unrecoverable",Jordan
+5,2026-09-26T16:58:00+00:00,2026-09-26T16:58:00+00:00,2026-09-26T16:58:00+00:00,FG1007 - Bench Power Supply,ELE1003 - 24V power supply 60W,1112,FG1007-1112-01,1,14.50,Wrong screw fitted,Sam
+4,2026-10-04T12:02:00+00:00,2026-10-04T12:02:00+00:00,2026-10-04T12:02:00+00:00,SA2002 - Drive motor unit,,1094,,1,41.54,"Failed final test, unrecoverable",Sam
+3,2026-09-27T16:39:00+00:00,2026-09-27T16:39:00+00:00,2026-09-27T16:39:00+00:00,SA2001 - Conveyor frame assembly,,1099,SA2001-0001,1,31.84,"Failed final test, unrecoverable",Alex
+2,2026-09-28T11:22:00+00:00,2026-09-28T11:22:00+00:00,2026-09-28T11:22:00+00:00,SA2001 - Conveyor frame assembly,,1125,SA2001-1125-03,1,31.84,"Wrong firmware, board damaged on reflash",Alex
+1,2026-10-02T10:29:00+00:00,2026-10-02T10:29:00+00:00,2026-10-02T10:29:00+00:00,SA2001 - Conveyor frame assembly,FAS1004 - T-slot nut,1102,SA2001-0011,3,0.12,PCB mis-fit in housing,Alex

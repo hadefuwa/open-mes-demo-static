@@ -1,0 +1,6 @@
+Level,Code,Name,Kind,Qty per parent,Extended qty,Unit cost,Line cost,Extended cost,Build minutes
+0,MET1001,Steel base plate,Component,2.00,2.00,4.40,8.80,8.80,0
+0,MET1003,Mounting bracket,Component,8.00,8.00,0.28,2.24,2.24,0
+0,FAS1001,M3 x 8 socket screw,Component,16.00,16.00,0.03,0.48,0.48,0
+0,FAS1004,T-slot nut,Component,6.00,6.00,0.12,0.72,0.72,0
+0,MEC1004,Ball bearing 608,Component,4.00,4.00,0.35,1.40,1.40,0

@@ -1,0 +1,11 @@
+ID,Created At,Updated At,Name,Kind,Status,Location,Notes
+10,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,Pneumatic test bench,Test,Maintenance,Test bay,Annual calibration in progress
+9,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,Test rig,Test,Available,Test bay,Safety and functional testing
+8,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,Wire cut and crimp,Electronics,Available,Electronics bay,Handles 0.5 to 2.5 mm2 cable
+7,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,Reflow oven,Electronics,Down,Electronics bay,Heater element failed; awaiting part
+6,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,Soldering station,Electronics,Available,Electronics bay,Lead-free; tip change every 2 weeks
+5,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,3D printer,Additive,In use,Prototype room,4 printers
+4,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,CNC lathe,Turning centre,Available,Machine shop,Used for spacers and shafts; service due next month
+3,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,CNC mill,Vertical machining centre,In use,Machine shop,Running; coolant topped up weekly
+2,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,Press brake,CNC hydraulic press brake,In use,Machine shop,Bending
+1,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,Laser cutter,Fibre laser cutting cell,Available,Machine shop,Sheet metal cutting

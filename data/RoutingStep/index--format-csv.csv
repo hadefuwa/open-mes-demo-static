@@ -1,0 +1,43 @@
+ID,Created At,Updated At,Product,Sequence,Name,Machine,Minutes
+42,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,FG1007 - Bench Power Supply,20,Functional test,Test rig,4.00
+41,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,FG1007 - Bench Power Supply,10,Assemble,,6.00
+40,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,FG1006 - Solar Energy Kit,30,Pack,,8.00
+39,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,FG1006 - Solar Energy Kit,20,Functional test,Test rig,15.00
+38,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,FG1006 - Solar Energy Kit,10,Assemble,,25.00
+37,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,FG1005 - Robot Arm Cell,30,Pack,,15.00
+36,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,FG1005 - Robot Arm Cell,20,Functional test,Test rig,40.00
+35,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,FG1005 - Robot Arm Cell,10,Final assembly,,60.00
+34,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,FG1004 - Motor Control Kit,30,Pack,,10.00
+33,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,FG1004 - Motor Control Kit,20,Functional test,Test rig,25.00
+32,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,FG1004 - Motor Control Kit,10,Final assembly,,40.00
+31,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,FG1003 - Sensor Workstation,30,Pack,,10.00
+30,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,FG1003 - Sensor Workstation,20,Functional test,Test rig,25.00
+29,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,FG1003 - Sensor Workstation,10,Final assembly,,45.00
+28,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,FG1002 - Pneumatics Trainer,40,Pack,,12.00
+27,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,FG1002 - Pneumatics Trainer,30,Functional test,Test rig,20.00
+26,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,FG1002 - Pneumatics Trainer,20,Pneumatic test,Pneumatic test bench,15.00
+25,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,FG1002 - Pneumatics Trainer,10,Final assembly,,60.00
+24,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,FG1001 - Conveyor Training Rig,30,Pack,,12.00
+23,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,FG1001 - Conveyor Training Rig,20,Functional test,Test rig,40.00
+22,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,FG1001 - Conveyor Training Rig,10,Final assembly,,70.00
+21,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,SA2006 - Robot arm unit,20,Calibrate,Test rig,25.00
+20,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,SA2006 - Robot arm unit,10,Assemble arm,,50.00
+19,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,SA2005 - Sensor head,30,Test,Test rig,6.00
+18,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,SA2005 - Sensor head,20,Assemble sensor head,,20.00
+17,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,SA2005 - Sensor head,10,3D print holders,3D printer,15.00
+16,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,SA2004 - Valve block,20,Pneumatic test,Pneumatic test bench,6.00
+15,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,SA2004 - Valve block,10,Assemble valve block,,12.00
+14,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,SA2003 - Control panel assembly,30,Test,Test rig,20.00
+13,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,SA2003 - Control panel assembly,20,Wiring,Wire cut and crimp,55.00
+12,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,SA2003 - Control panel assembly,10,Mount components,,40.00
+11,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,SA2002 - Drive motor unit,20,Assemble motor unit,,18.00
+10,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,SA2002 - Drive motor unit,10,Turn shafts,CNC lathe,12.00
+9,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,SA2001 - Conveyor frame assembly,30,Assemble frame,,25.00
+8,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,SA2001 - Conveyor frame assembly,20,Bend,Press brake,6.00
+7,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,SA2001 - Conveyor frame assembly,10,Cut sheet metal,Laser cutter,8.00
+6,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,SA2007 - Base frame,30,Assemble frame,,20.00
+5,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,SA2007 - Base frame,20,Machine mounts,CNC mill,18.00
+4,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,SA2007 - Base frame,10,Cut plates,Laser cutter,10.00
+3,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,SA2008 - Controller board assembly,30,Functional test,Test rig,8.00
+2,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,SA2008 - Controller board assembly,20,Reflow and inspect,Reflow oven,10.00
+1,2026-10-09T11:50:37+00:00,2026-10-09T11:50:37+00:00,SA2008 - Controller board assembly,10,Solder components,Soldering station,25.00

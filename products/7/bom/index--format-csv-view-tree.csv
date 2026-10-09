@@ -1,0 +1,3 @@
+Level,Code,Name,Kind,Qty per parent,Extended qty,Unit cost,Line cost,Extended cost,Build minutes
+0,ELE1003,24V power supply 60W,Component,1.00,1.00,14.50,14.50,14.50,0
+0,ELE1004,Terminal block 2-way,Component,2.00,2.00,0.25,0.50,0.50,0

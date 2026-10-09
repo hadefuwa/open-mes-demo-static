@@ -1,0 +1,6 @@
+Level,Code,Name,Kind,Qty per parent,Extended qty,Unit cost,Line cost,Extended cost,Build minutes
+0,ELE1002,DC geared motor 24V,Component,1.00,1.00,22.00,22.00,22.00,0
+0,MEC1002,Timing belt 6mm,Component,1.00,1.00,2.40,2.40,2.40,0
+0,MEC1003,Pulley 20 tooth,Component,2.00,2.00,1.10,2.20,2.20,0
+0,MEC1004,Ball bearing 608,Component,2.00,2.00,0.35,0.70,0.70,0
+0,FAS1001,M3 x 8 socket screw,Component,8.00,8.00,0.03,0.24,0.24,0

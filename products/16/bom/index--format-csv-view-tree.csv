@@ -1,0 +1,7 @@
+Level,Code,Name,Kind,Qty per parent,Extended qty,Unit cost,Line cost,Extended cost,Build minutes
+0,PCB1001,Controller PCB blank,Component,1.00,1.00,1.20,1.20,1.20,0
+0,PCB1003,Microcontroller,Component,1.00,1.00,2.60,2.60,2.60,0
+0,PCB1004,Resistor 10k 0603,Component,12.00,12.00,0.02,0.24,0.24,0
+0,PCB1005,Capacitor 10uF 0603,Component,4.00,4.00,0.06,0.24,0.24,0
+0,PCB1006,Voltage regulator 5V,Component,1.00,1.00,0.34,0.34,0.34,0
+0,ELE1004,Terminal block 2-way,Component,4.00,4.00,0.25,1.00,1.00,0

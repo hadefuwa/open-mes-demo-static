@@ -1,0 +1,4 @@
+Level,Code,Name,Kind,Qty per parent,Extended qty,Unit cost,Line cost,Extended cost,Build minutes
+0,RBT1001,Robot arm mechanism,Component,1.00,1.00,340.00,340.00,340.00,0
+0,MET1001,Steel base plate,Component,1.00,1.00,4.40,4.40,4.40,0
+0,FAS1001,M3 x 8 socket screw,Component,12.00,12.00,0.03,0.36,0.36,0

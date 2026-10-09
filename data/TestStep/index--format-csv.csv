@@ -1,0 +1,85 @@
+ID,Report,Order,Section,Number,Criteria,Result,Comments,Sign Off
+84,TP-100-SA2004-0018,14,6. Sign-off,6.2,Test sheet signed,PASS,,AL
+83,TP-100-SA2004-0018,13,6. Sign-off,6.1,Comments recorded,PASS,,AL
+82,TP-100-SA2004-0018,12,5. Functional test,5.3,Emergency stop and reset work,PASS,,AL
+81,TP-100-SA2004-0018,11,5. Functional test,5.2,All outputs operate correctly,PASS,,AL
+80,TP-100-SA2004-0018,10,5. Functional test,5.1,All inputs respond as drawn,PASS,,AL
+79,TP-100-SA2004-0018,9,4. Power-up,4.2,Controller boots without faults,PASS,,AL
+78,TP-100-SA2004-0018,8,4. Power-up,4.1,Supply on; status indicators correct,PASS,,AL
+77,TP-100-SA2004-0018,7,3. Dead testing,3.3,Insulation resistance within limits,PASS,,AL
+76,TP-100-SA2004-0018,6,3. Dead testing,3.2,Continuity of all wiring confirmed,PASS,,AL
+75,TP-100-SA2004-0018,5,3. Dead testing,3.1,Supply disconnected; no indicators lit,PASS,,AL
+74,TP-100-SA2004-0018,4,2. Visual inspection,2.2,All fixings tight and wires labelled,PASS,,AL
+73,TP-100-SA2004-0018,3,2. Visual inspection,2.1,No physical damage; labels legible,PASS,,AL
+72,TP-100-SA2004-0018,2,1. Documentation,1.2,Test equipment in calibration,PASS,,AL
+71,TP-100-SA2004-0018,1,1. Documentation,1.1,Latest drawings and test sheet to hand,PASS,,AL
+70,TP-100-SA2004-0017,14,6. Sign-off,6.2,Test sheet signed,PASS,,AL
+69,TP-100-SA2004-0017,13,6. Sign-off,6.1,Comments recorded,PASS,,AL
+68,TP-100-SA2004-0017,12,5. Functional test,5.3,Emergency stop and reset work,PASS,,AL
+67,TP-100-SA2004-0017,11,5. Functional test,5.2,All outputs operate correctly,PASS,,AL
+66,TP-100-SA2004-0017,10,5. Functional test,5.1,All inputs respond as drawn,PASS,,AL
+65,TP-100-SA2004-0017,9,4. Power-up,4.2,Controller boots without faults,PASS,,AL
+64,TP-100-SA2004-0017,8,4. Power-up,4.1,Supply on; status indicators correct,PASS,,AL
+63,TP-100-SA2004-0017,7,3. Dead testing,3.3,Insulation resistance within limits,PASS,,AL
+62,TP-100-SA2004-0017,6,3. Dead testing,3.2,Continuity of all wiring confirmed,PASS,,AL
+61,TP-100-SA2004-0017,5,3. Dead testing,3.1,Supply disconnected; no indicators lit,PASS,,AL
+60,TP-100-SA2004-0017,4,2. Visual inspection,2.2,All fixings tight and wires labelled,PASS,,AL
+59,TP-100-SA2004-0017,3,2. Visual inspection,2.1,No physical damage; labels legible,PASS,,AL
+58,TP-100-SA2004-0017,2,1. Documentation,1.2,Test equipment in calibration,PASS,,AL
+57,TP-100-SA2004-0017,1,1. Documentation,1.1,Latest drawings and test sheet to hand,PASS,,AL
+56,TP-100-SA2004-0016,14,6. Sign-off,6.2,Test sheet signed,PASS,,JO
+55,TP-100-SA2004-0016,13,6. Sign-off,6.1,Comments recorded,PASS,,JO
+54,TP-100-SA2004-0016,12,5. Functional test,5.3,Emergency stop and reset work,PASS,,JO
+53,TP-100-SA2004-0016,11,5. Functional test,5.2,All outputs operate correctly,PASS,,JO
+52,TP-100-SA2004-0016,10,5. Functional test,5.1,All inputs respond as drawn,PASS,,JO
+51,TP-100-SA2004-0016,9,4. Power-up,4.2,Controller boots without faults,PASS,,JO
+50,TP-100-SA2004-0016,8,4. Power-up,4.1,Supply on; status indicators correct,FAIL,Loose terminal on X2,JO
+49,TP-100-SA2004-0016,7,3. Dead testing,3.3,Insulation resistance within limits,PASS,,JO
+48,TP-100-SA2004-0016,6,3. Dead testing,3.2,Continuity of all wiring confirmed,PASS,,JO
+47,TP-100-SA2004-0016,5,3. Dead testing,3.1,Supply disconnected; no indicators lit,PASS,,JO
+46,TP-100-SA2004-0016,4,2. Visual inspection,2.2,All fixings tight and wires labelled,PASS,,JO
+45,TP-100-SA2004-0016,3,2. Visual inspection,2.1,No physical damage; labels legible,PASS,,JO
+44,TP-100-SA2004-0016,2,1. Documentation,1.2,Test equipment in calibration,PASS,,JO
+43,TP-100-SA2004-0016,1,1. Documentation,1.1,Latest drawings and test sheet to hand,PASS,,JO
+42,TP-100-SA2004-0015,14,6. Sign-off,6.2,Test sheet signed,PASS,,AL
+41,TP-100-SA2004-0015,13,6. Sign-off,6.1,Comments recorded,PASS,,AL
+40,TP-100-SA2004-0015,12,5. Functional test,5.3,Emergency stop and reset work,PASS,,AL
+39,TP-100-SA2004-0015,11,5. Functional test,5.2,All outputs operate correctly,PASS,,AL
+38,TP-100-SA2004-0015,10,5. Functional test,5.1,All inputs respond as drawn,PASS,,AL
+37,TP-100-SA2004-0015,9,4. Power-up,4.2,Controller boots without faults,PASS,,AL
+36,TP-100-SA2004-0015,8,4. Power-up,4.1,Supply on; status indicators correct,PASS,,AL
+35,TP-100-SA2004-0015,7,3. Dead testing,3.3,Insulation resistance within limits,PASS,,AL
+34,TP-100-SA2004-0015,6,3. Dead testing,3.2,Continuity of all wiring confirmed,PASS,,AL
+33,TP-100-SA2004-0015,5,3. Dead testing,3.1,Supply disconnected; no indicators lit,PASS,,AL
+32,TP-100-SA2004-0015,4,2. Visual inspection,2.2,All fixings tight and wires labelled,PASS,,AL
+31,TP-100-SA2004-0015,3,2. Visual inspection,2.1,No physical damage; labels legible,PASS,,AL
+30,TP-100-SA2004-0015,2,1. Documentation,1.2,Test equipment in calibration,PASS,,AL
+29,TP-100-SA2004-0015,1,1. Documentation,1.1,Latest drawings and test sheet to hand,PASS,,AL
+28,TP-100-SA2007-0007,14,6. Sign-off,6.2,Test sheet signed,PASS,,SA
+27,TP-100-SA2007-0007,13,6. Sign-off,6.1,Comments recorded,PASS,,SA
+26,TP-100-SA2007-0007,12,5. Functional test,5.3,Emergency stop and reset work,PASS,,SA
+25,TP-100-SA2007-0007,11,5. Functional test,5.2,All outputs operate correctly,PASS,,SA
+24,TP-100-SA2007-0007,10,5. Functional test,5.1,All inputs respond as drawn,PASS,,SA
+23,TP-100-SA2007-0007,9,4. Power-up,4.2,Controller boots without faults,PASS,,SA
+22,TP-100-SA2007-0007,8,4. Power-up,4.1,Supply on; status indicators correct,PASS,,SA
+21,TP-100-SA2007-0007,7,3. Dead testing,3.3,Insulation resistance within limits,PASS,,SA
+20,TP-100-SA2007-0007,6,3. Dead testing,3.2,Continuity of all wiring confirmed,PASS,,SA
+19,TP-100-SA2007-0007,5,3. Dead testing,3.1,Supply disconnected; no indicators lit,PASS,,SA
+18,TP-100-SA2007-0007,4,2. Visual inspection,2.2,All fixings tight and wires labelled,PASS,,SA
+17,TP-100-SA2007-0007,3,2. Visual inspection,2.1,No physical damage; labels legible,PASS,,SA
+16,TP-100-SA2007-0007,2,1. Documentation,1.2,Test equipment in calibration,PASS,,SA
+15,TP-100-SA2007-0007,1,1. Documentation,1.1,Latest drawings and test sheet to hand,PASS,,SA
+14,TP-100-SA2004-0014,14,6. Sign-off,6.2,Test sheet signed,PASS,,AL
+13,TP-100-SA2004-0014,13,6. Sign-off,6.1,Comments recorded,PASS,,AL
+12,TP-100-SA2004-0014,12,5. Functional test,5.3,Emergency stop and reset work,PASS,,AL
+11,TP-100-SA2004-0014,11,5. Functional test,5.2,All outputs operate correctly,PASS,,AL
+10,TP-100-SA2004-0014,10,5. Functional test,5.1,All inputs respond as drawn,PASS,,AL
+9,TP-100-SA2004-0014,9,4. Power-up,4.2,Controller boots without faults,PASS,,AL
+8,TP-100-SA2004-0014,8,4. Power-up,4.1,Supply on; status indicators correct,PASS,,AL
+7,TP-100-SA2004-0014,7,3. Dead testing,3.3,Insulation resistance within limits,PASS,,AL
+6,TP-100-SA2004-0014,6,3. Dead testing,3.2,Continuity of all wiring confirmed,PASS,,AL
+5,TP-100-SA2004-0014,5,3. Dead testing,3.1,Supply disconnected; no indicators lit,PASS,,AL
+4,TP-100-SA2004-0014,4,2. Visual inspection,2.2,All fixings tight and wires labelled,PASS,,AL
+3,TP-100-SA2004-0014,3,2. Visual inspection,2.1,No physical damage; labels legible,PASS,,AL
+2,TP-100-SA2004-0014,2,1. Documentation,1.2,Test equipment in calibration,PASS,,AL
+1,TP-100-SA2004-0014,1,1. Documentation,1.1,Latest drawings and test sheet to hand,PASS,,AL
