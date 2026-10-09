@@ -32,6 +32,7 @@
     <div><div class="muted">Type</div><strong>{{ product.get_kind_display }}</strong></div>
     <div><div class="muted">Supplier</div><strong>{{ product.supplier_code|default:"-" }}</strong>{% if product.supplier_part_no %} <span class="muted">· part {{ product.supplier_part_no }}</span>{% endif %}</div>
     <div><div class="muted">Free stock</div><strong>{% if product.free_stock is None %}-{% else %}{{ product.free_stock }}{% endif %}</strong>{% if product.low_stock %} <span class="pill bad">Low</span>{% endif %}</div>
+    {% if product.stock_quantity is not None %}<div><div class="muted">On hand</div><strong>{{ product.stock_quantity|floatformat:"-2" }}</strong>{% if not product.is_stocked %} <span class="pill warn">Non-stock</span>{% elif product.low_stock %} <span class="pill bad">Low</span>{% endif %}</div>{% endif %}
     <div><div class="muted">Re-order level</div><strong>{% if product.reorder_level is None %}-{% else %}{{ product.reorder_level }}{% endif %}</strong></div>
     {% if product.rrp %}<div><div class="muted">Spare RRP</div><strong>£{{ product.rrp|floatformat:2 }}</strong></div>{% endif %}
     <div><div class="muted">Created</div><strong>{{ product.created_at|date:"d M Y H:i" }}</strong></div>

@@ -1,6 +1,7 @@
 """Decide whether each catalogue item is a finished product, an assembly or a component.
 
-Structure beats guesswork, so the rules run in this order:
+The ERP's own item type (Product.erp_type, from a BOM register) beats everything when present. Otherwise
+structure beats guesswork, so the rules run in this order:
   1. Anything with its own BOM is an assembly, or a finished product if nothing is made from it.
   2. Anything that is a line on another item's BOM is a component.
   3. Anything customers have ordered is a finished product.
@@ -10,6 +11,7 @@ More real BOMs mean fewer items fall through to rule 4.
 """
 import re
 
+from .bom_import import kind_from_erp_type
 from .models import Product
 
 # Words that mark a single part or spare rather than something sold as a system.
@@ -35,7 +37,10 @@ def classify_kinds():
 
     changed = []
     for product in Product.objects.all():
-        if product.pk in has_bom:
+        erp_kind = kind_from_erp_type(product.erp_type)
+        if erp_kind:
+            kind = erp_kind
+        elif product.pk in has_bom:
             kind = Product.ASSEMBLY if product.pk in is_child else Product.FINISHED
         elif product.pk in is_child:
             kind = Product.COMPONENT

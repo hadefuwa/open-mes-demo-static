@@ -46,6 +46,11 @@ class Product(TimeStamped):
     reorder_level = models.PositiveIntegerField(null=True, blank=True)
     supplier_code = models.CharField(max_length=30, blank=True)  # supplier account code
     supplier_part_no = models.CharField(max_length=60, blank=True)
+    erp_type = models.CharField(max_length=30, blank=True)  # the ERP's own classification, e.g. "Finished Goods"
+    standard_cost = models.DecimalField(max_digits=12, decimal_places=4, null=True, blank=True)  # ERP standard cost, for comparison
+    stock_quantity = models.DecimalField(max_digits=12, decimal_places=2, null=True, blank=True)  # on hand
+    is_stocked = models.BooleanField(default=True)  # False for non-stock items
+    revision = models.CharField(max_length=20, blank=True)
 
     class Meta:
         ordering = ["code"]
@@ -60,9 +65,17 @@ class Product(TimeStamped):
 
     @property
     def low_stock(self):
-        """True when stock is known and at or below the re-order level."""
-        return (self.free_stock is not None and self.reorder_level is not None
-                and self.reorder_level > 0 and self.free_stock <= self.reorder_level)
+        """True when stock is known and at or below the re-order level (on hand if known, else free stock)."""
+        on_hand = self.stock_quantity if self.stock_quantity is not None else self.free_stock
+        return (on_hand is not None and self.reorder_level is not None
+                and self.reorder_level > 0 and on_hand <= self.reorder_level)
+
+    @property
+    def cost_variance(self):
+        """ERP standard cost minus the cost rolled up from our BOM, or None when either is unknown."""
+        if self.standard_cost is None or not self.bom_lines.exists():
+            return None
+        return self.standard_cost - self.bom_cost
 
     @property
     def margin_pct(self):

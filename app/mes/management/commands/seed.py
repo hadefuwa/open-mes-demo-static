@@ -8,9 +8,9 @@ from django.core.management.base import BaseCommand, CommandError
 from django.db import connection
 from django.utils import timezone
 
-from mes import bom_import, classify, pricing
 from mes.datapacks import check_pack, load_pack
 from mes.demo.builder import build_catalogue
+from mes.demo.finish import finish_catalogue
 from mes.models import (BomLine, CustomerOrder, CustomerOrderLine, Defect, Event, Machine, Product,
                         ProductionTechnician, RoutingStep, TestReport, TestStep, Unit, WorkOrder,
                         Workstation)
@@ -133,17 +133,7 @@ class Command(BaseCommand):
         # Real data (workbooks etc.) if the pack has any, then kinds and costs worked out from structure.
         if hasattr(pack, "load_real_data"):
             pack.load_real_data(self)
-        kinds = classify.classify_kinds()
-        if getattr(pack, "ESTIMATE_MISSING", True):  # real-data packs turn this off: never invent costs or routings
-            filled, routed = bom_import.fill_missing_costs(), bom_import.ensure_routings()
-        else:
-            filled = routed = 0
-        self.stdout.write(f"Classified: {kinds['finished']} products, {kinds['assembly']} assemblies, "
-                          f"{kinds['component']} components ({filled} costs estimated, {routed} routings added).")
-        if getattr(pack, "CALIBRATE_TO_RRP", False):
-            stats = pricing.calibrate_costs()
-            self.stdout.write(f"Costs calibrated to RRP/3: {stats['topped_up']} BOMs topped up, {stats['made_leaf']} "
-                              f"made bought-in, {stats['estimated_rrp']} RRPs estimated.")
+        finish_catalogue(pack, self)
         products = {p.code: p for p in Product.objects.all()}
 
         # Per-area extra demo data (sales history, planning, machines, defects), as the pack requests.

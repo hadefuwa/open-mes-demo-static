@@ -10,6 +10,12 @@ sheets (customer accounts, notes) are skipped untouched:
     Quantity On Order | Re-Order Level | Re-Order Quantity | Last Cost Price (Std) | ... | Free Stock
     Sets description, cost, supplier and stock levels. Codes not already known become components.
 
+  * BOM register:  Bom Reference | Description | Type | Category | Revision | Unit Cost | Category Name
+    The ERP's item type and standard cost for every manufactured item (no structure).
+  * Stock records: Stock Code | Description | Category | Item Type | Quantity in Stock
+    On-hand quantities and whether the item is stocked.
+  * Design BOM:    a flat one-product sheet (see import_design_bom).
+
 Kinds (finished / assembly / component) are decided afterwards by mes.classify.
 """
 import hashlib
@@ -150,6 +156,98 @@ def import_stock_master(rows):
     return len(new), len(changed)
 
 
+def kind_from_erp_type(erp_type):
+    """Map an ERP item type ("Finished Goods", "Sub-Assembly", "Component") to a Product kind, or None."""
+    t = _text(erp_type).lower()
+    if "finished" in t:
+        return Product.FINISHED
+    if "assembl" in t:
+        return Product.ASSEMBLY
+    if "component" in t:
+        return Product.COMPONENT
+    return None
+
+
+@transaction.atomic
+def import_bom_register(rows):
+    """A register of BOM headers: Bom Reference | Description | Type | Category | Revision | Unit Cost |
+    Category Name. It carries the ERP's own item type and standard cost for every manufactured item but not the
+    structure (use an explosion sheet for that). Returns (created, updated).
+
+    The ERP standard cost is kept as `standard_cost`. Items whose structure we have not imported also use it
+    as their unit cost, so costs stay real; items with an imported BOM keep the cost rolled up from it."""
+    start, idx = _find_header(rows, ("bom reference", "description", "type", "unit cost"))
+    if start is None:
+        return 0, 0
+    get = lambda r, name: r[idx[name]] if name in idx and idx[name] < len(r) else None
+
+    existing = {p.code: p for p in Product.objects.all()}
+    structured = set(BomLine.objects.values_list("parent__code", flat=True))
+    new, changed = [], []
+    for row in rows[start + 1:]:
+        code = _text(get(row, "bom reference"))
+        if not code:
+            continue
+        description = _text(get(row, "description"))
+        erp_type = _text(get(row, "type"))
+        cost = _number(get(row, "unit cost"))
+        cost = cost.quantize(Decimal("0.0001")) if cost and cost > 0 else None
+        product = existing.get(code)
+        created = product is None
+        if created:
+            product = Product(code=code, name=description or code, category=category_of(code),
+                              kind=kind_from_erp_type(erp_type) or Product.COMPONENT)
+            existing[code] = product
+        elif description:
+            product.name = description
+        product.erp_type, product.revision = erp_type, _text(get(row, "revision"))[:20]
+        product.standard_cost = cost
+        category_name = _text(get(row, "category name"))
+        if category_name and not product.range_name:
+            product.range_name = category_name[:60]
+        if cost is not None and code not in structured:
+            product.unit_cost = cost
+        (new if created else changed).append(product)
+    Product.objects.bulk_create(new, batch_size=500)
+    Product.objects.bulk_update(changed, ["name", "erp_type", "revision", "standard_cost", "range_name", "unit_cost"],
+                                batch_size=500)
+    return len(new), len(changed)
+
+
+@transaction.atomic
+def import_stock_records(rows):
+    """Stock levels: Stock Code | Description | Category | Item Type | Quantity in Stock. Sets the on-hand
+    quantity and whether the item is stocked. Unknown codes become components. Returns (created, updated)."""
+    start, idx = _find_header(rows, ("stock code", "item type", "quantity in stock"))
+    if start is None:
+        return 0, 0
+    get = lambda r, name: r[idx[name]] if name in idx and idx[name] < len(r) else None
+
+    existing = {p.code: p for p in Product.objects.all()}
+    new, changed = [], []
+    for row in rows[start + 1:]:
+        code = _text(get(row, "stock code"))
+        if not code:
+            continue
+        quantity = _number(get(row, "quantity in stock"))
+        stocked = not _text(get(row, "item type")).lower().startswith("non")
+        description = _text(get(row, "description"))
+        product = existing.get(code)
+        if product is None:
+            product = Product(code=code, name=description or code, kind=Product.COMPONENT,
+                              category=category_of(code), stock_quantity=quantity, is_stocked=stocked)
+            existing[code] = product
+            new.append(product)
+        else:
+            product.stock_quantity, product.is_stocked = quantity, stocked
+            if description and product.name in ("", product.code):
+                product.name = description
+            changed.append(product)
+    Product.objects.bulk_create(new, batch_size=500)
+    Product.objects.bulk_update(changed, ["stock_quantity", "is_stocked", "name"], batch_size=500)
+    return len(new), len(changed)
+
+
 def _duration_minutes(value):
     """'10m57s' -> 10.95, '1h5m' -> 65. Returns None when there is no usable time."""
     text = _text(value).lower()
@@ -240,9 +338,16 @@ def code_from_filename(path):
 def import_workbook(path, names=None):
     """Import every recognised sheet in a workbook. `names` optionally maps a product code to its name.
     Returns a summary dict."""
-    summary = {"explosions": 0, "bom_lines": 0, "stock_created": 0, "stock_updated": 0}
+    summary = {"explosions": 0, "bom_lines": 0, "stock_created": 0, "stock_updated": 0,
+               "register_created": 0, "register_updated": 0, "records_created": 0, "records_updated": 0}
     top_code = code_from_filename(path)
     for rows in _load_sheets(path).values():
+        created, updated = import_bom_register(rows)
+        summary["register_created"] += created
+        summary["register_updated"] += updated
+        created, updated = import_stock_records(rows)
+        summary["records_created"] += created
+        summary["records_updated"] += updated
         touched, lines = import_explosion(rows)
         if lines:
             summary["explosions"] += 1

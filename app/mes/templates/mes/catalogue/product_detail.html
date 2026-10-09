@@ -53,6 +53,9 @@
       <tr><td class="muted">Name</td><td>{{ product.name }}</td></tr>
       <tr><td class="muted">Kind</td><td>{{ product.get_kind_display }}</td></tr>
       <tr><td class="muted">Category</td><td>{{ product.category }}</td></tr>
+      {% if product.erp_type %}<tr><td class="muted">ERP item type</td><td>{{ product.erp_type }}{% if product.revision %} · rev {{ product.revision }}{% endif %}</td></tr>{% endif %}
+      {% if product.standard_cost is not None %}<tr><td class="muted">ERP standard cost</td><td>&pound;{{ product.standard_cost|floatformat:"2" }}
+        {% with v=product.cost_variance %}{% if v is not None %}<span class="muted">· BOM roll-up is &pound;{{ product.bom_cost|floatformat:"2" }} ({% if v > 0 %}ERP is &pound;{{ v|floatformat:"2" }} higher{% elif v < 0 %}ERP is &pound;{{ v|floatformat:"2"|cut:"-" }} lower{% else %}same{% endif %})</span>{% endif %}{% endwith %}</td></tr>{% endif %}
       <tr><td class="muted">Units sold</td><td>{{ units_sold }}</td></tr>
       <tr><td class="muted">Created</td><td>{{ product.created_at|date:"d M Y H:i" }}</td></tr>
       <tr><td class="muted">Updated</td><td>{{ product.updated_at|date:"d M Y H:i" }}</td></tr>
