@@ -4,6 +4,8 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 from django.views.decorators.http import require_POST
 
+from .permissions import require_role
+
 from .models import BomLine, Machine, Product, RoutingStep, WorkOrder
 from .tables import Column, build_table
 
@@ -79,6 +81,7 @@ def machine_detail(request, pk):
 
 
 @require_POST
+@require_role("machine")
 def machine_status(request, pk):
     machine = get_object_or_404(Machine, pk=pk)
     status = request.POST.get("status", "")

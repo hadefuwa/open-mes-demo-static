@@ -37,6 +37,10 @@ Open http://127.0.0.1:8000/. Run `manage.py seed` again at any time to reset the
 
 Tests: `python manage.py test mes`
 
+## Production
+
+The same code runs in production on PostgreSQL (for example Supabase) with login required and roles for planners, technicians and team leaders. Everything is configured through environment variables; the repository includes a `Dockerfile`, a Render blueprint and a step-by-step guide: [Docs/DEPLOY.md](Docs/DEPLOY.md). Locally nothing changes: SQLite, no login.
+
 ## Data packs
 
 The software is generic. Everything specific to a business lives in a **data pack**: a single Python module in [app/mes/datapacks/](app/mes/datapacks) holding the catalogue, machines, routings, example orders and, optionally, a loader for real files. `manage.py seed --pack NAME` (or the `MES_DATA_PACK` setting) chooses one. The bundled `generic` pack is a small invented dataset; copy it to describe your own business. See [Docs/DATA-PACKS.md](Docs/DATA-PACKS.md).

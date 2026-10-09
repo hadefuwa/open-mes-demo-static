@@ -32,6 +32,7 @@
   <div class="card span-6">
     <h2 style="margin-top:0">Status</h2>
     <p class="muted" style="margin-top:0">Change the machine status. The impact on products and work orders updates immediately.</p>
+    {% if can.machine %}
     <form method="post" action="{% url 'machine_status' machine.pk %}" class="row" style="align-items:flex-end">
       {% csrf_token %}
       <label>Status
@@ -41,6 +42,7 @@
       </label>
       <button>Save</button>
     </form>
+    {% else %}<p class="muted" style="margin:0">Only a planner or team leader can change machine status.</p>{% endif %}
   </div>
 </div>
 

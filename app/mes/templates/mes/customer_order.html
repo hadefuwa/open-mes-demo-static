@@ -15,9 +15,9 @@
           <a href="{% url 'operator' l.work_order.pk %}" style="font-weight:700">{{ l.work_order.number }}</a>
           <span class="badge st-{{ l.work_order.status }}" style="margin-left:6px">{{ l.work_order.get_status_display }}</span>
         {% else %}
-          <form method="post" action="{% url 'raise_work_order' order.pk l.pk %}">{% csrf_token %}
+          {% if can.raise %}<form method="post" action="{% url 'raise_work_order' order.pk l.pk %}">{% csrf_token %}
             <button class="small">Raise works order</button>
-          </form>
+          </form>{% else %}<span class="muted">Not raised</span>{% endif %}
         {% endif %}
       </td>
     </tr>

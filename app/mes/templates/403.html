@@ -1,0 +1,9 @@
+{% extends "mes/base.html" %}
+{% block title %}Not allowed · Open-MES{% endblock %}
+{% block content %}
+<div class="page-head"><div>
+  <h1>You don't have permission to do that</h1>
+  <p class="sub">Your role ({{ role_label|default:"none" }}) can look at everything but cannot perform this action. Ask an administrator if you need it.</p>
+</div></div>
+<div class="card"><a href="javascript:history.back()" style="font-weight:700">&larr; Go back</a></div>
+{% endblock %}

@@ -278,7 +278,12 @@
       </form>
       <div class="top-right">
         <a class="icon-btn" href="{% url 'dashboard' %}#alerts" aria-label="Alerts"><svg class="icon"><use href="#i-bell"/></svg>{% if alert_count %}<span class="dot">{{ alert_count }}</span>{% endif %}</a>
+        {% if user.is_authenticated %}
+        <div class="user"><div class="avatar">{{ user.get_username|slice:":2"|upper }}</div><div><b>{{ user.get_full_name|default:user.get_username }}</b><span>{{ role_label }}</span></div></div>
+        <form method="post" action="{% url 'logout' %}">{% csrf_token %}<button class="small" style="background:var(--bg);color:var(--ink);border:1px solid var(--line)">Sign out</button></form>
+        {% else %}
         <div class="user"><div class="avatar">DU</div><div><b>Demo user</b><span>Production planner</span></div></div>
+        {% endif %}
       </div>
     </header>
 

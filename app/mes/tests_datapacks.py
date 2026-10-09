@@ -33,7 +33,7 @@ class GenericPackTest(TestCase):
 
     def test_seeding_from_scratch_and_every_page_renders(self):
         out = StringIO()
-        call_command("seed", pack="generic", stdout=out)
+        call_command("seed", pack="generic", force=True, stdout=out)
         self.assertIn("Data pack: generic", out.getvalue())
         self.assertEqual(Product.objects.filter(kind=Product.FINISHED).count(), 8)
 

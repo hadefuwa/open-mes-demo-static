@@ -6,6 +6,8 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.utils import timezone
 from django.views.decorators.http import require_POST
 
+from .permissions import require_role
+
 from . import bom, costing
 from .models import Defect, Event, ProductionTechnician, Unit, WorkOrder
 from .tables import Column, build_table
@@ -113,6 +115,7 @@ def defects(request):
 
 
 @require_POST
+@require_role("work")
 def defect_add(request, order_pk):
     order = get_object_or_404(WorkOrder.objects.select_related("product", "technician"), pk=order_pk)
     post = request.POST

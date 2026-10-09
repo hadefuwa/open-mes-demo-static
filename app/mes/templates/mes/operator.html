@@ -17,6 +17,10 @@
 {% if error %}<div class="err">{{ error }}</div>{% endif %}
 
 <div class="card">
+  {% if not can.assign %}
+  <div class="row" style="align-items:center"><span class="muted">Production technician</span> <strong>{{ order.technician|default:"Unassigned" }}</strong>
+    <a href="{% url 'print_sheet' order.pk %}" target="_blank" style="margin-left:auto;font-weight:600">Print work order &nearr;</a></div>
+  {% else %}
   <form method="post" action="{% url 'assign' order.pk %}" class="row">{% csrf_token %}
     <label>Production technician
       <select name="technician">
@@ -27,23 +31,24 @@
     <button class="small">Assign</button>
     <a href="{% url 'print_sheet' order.pk %}" target="_blank" style="margin-left:auto;font-weight:600">Print work order &nearr;</a>
   </form>
+  {% endif %}
 </div>
 
-{% if order.status == "entered" %}
+{% if order.status == "entered" and can.stock %}
   <form method="post" action="{% url 'allocate' order.pk %}">{% csrf_token %}
     <button class="big">Allocate stock</button>
   </form>
-{% elif order.status == "allocated" %}
+{% elif order.status == "allocated" and can.stock %}
   <form method="post" action="{% url 'issue' order.pk %}">{% csrf_token %}
     <button class="big">Issue stock to job</button>
   </form>
-{% elif order.status == "issued" %}
+{% elif order.status == "issued" and can.work %}
   <form method="post" action="{% url 'start' order.pk %}">{% csrf_token %}
     <button class="big ok">Start job</button>
   </form>
 {% endif %}
 
-{% if order.status == "in_progress" %}
+{% if order.status == "in_progress" and can.work %}
   <div class="card">
     <h2 style="margin-bottom:12px">Record a unit</h2>
     <form method="post" action="{% url 'add_unit' order.pk %}" class="row">{% csrf_token %}
@@ -73,7 +78,7 @@
       <td class="muted">{{ u.reason }}</td>
       <td>{% for tr in u.test_reports.all %}<a href="{% url 'test_report' tr.pk %}" style="font-weight:600">{{ tr.report_id }}</a>{% endfor %}</td>
       <td style="text-align:right">
-        {% if u.result == "rework" and order.status == "in_progress" %}
+        {% if u.result == "rework" and order.status == "in_progress" and can.work %}
         <form method="post" action="{% url 'retest_unit' order.pk u.pk %}" class="row" style="justify-content:flex-end">{% csrf_token %}
           <button name="result" value="pass" class="ok small">Retest: pass</button>
           <button name="result" value="scrap" class="bad small">Scrap</button>
@@ -86,7 +91,7 @@
 </div>
 {% endif %}
 
-{% if order.status == "in_progress" or order.status == "qa" %}
+{% if order.status == "in_progress" or order.status == "qa" %}{% if can.work %}
 {% load defect_tags %}
 <div class="card" id="defect-form">
   <h2 style="margin-bottom:4px">Record a defect</h2>
@@ -119,9 +124,9 @@
     <button class="bad">Record defect</button>
   </form>
 </div>
-{% endif %}
+{% endif %}{% endif %}
 
-{% if order.status == "in_progress" %}
+{% if order.status == "in_progress" and can.work %}
   <form method="post" action="{% url 'finish' order.pk %}">{% csrf_token %}
     <button class="big warn">Finish build &rarr; send to QA</button>
   </form>
@@ -131,10 +136,12 @@
   <div class="card">
     <strong>Awaiting team leader QA sign-off</strong>
     <p class="muted" style="margin:4px 0 12px">Check the sampled units and visual finish, then approve or send back.</p>
+    {% if can.qa %}
     <form method="post" class="row" style="align-items:center">{% csrf_token %}
       <button class="ok" formaction="{% url 'approve' order.pk %}">Approve &amp; complete</button>
       <button class="bad" formaction="{% url 'reject' order.pk %}">Reject &mdash; back to build</button>
     </form>
+    {% else %}<p class="muted" style="margin:0">Only a team leader can approve or reject.</p>{% endif %}
   </div>
 {% endif %}
 

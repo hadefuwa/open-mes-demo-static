@@ -7,7 +7,7 @@ manage.py seed                 # the pack named by the MES_DATA_PACK setting (de
 manage.py seed --pack mypack   # a specific pack
 ```
 
-`manage.py seed` **resets the database** first, so never run it against data you want to keep.
+`manage.py seed` **resets the database** first, so never run it against data you want to keep. It refuses to run on PostgreSQL, or with `DEBUG` off, unless you add `--force`.
 
 ## What a pack contains
 

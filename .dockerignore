@@ -1,0 +1,11 @@
+.git
+.venv
+**/__pycache__
+*.pyc
+app/db.sqlite3
+app/staticfiles
+data
+dist
+site
+Docs
+scripts

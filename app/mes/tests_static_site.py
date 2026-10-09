@@ -16,7 +16,7 @@ class StaticSiteTest(TestCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        call_command("seed", pack="generic", stdout=StringIO())
+        call_command("seed", pack="generic", force=True, stdout=StringIO())
         cls.tmp = tempfile.TemporaryDirectory()
         cls.site = Path(cls.tmp.name)
         call_command("build_static_site", out=str(cls.site), stdout=StringIO())

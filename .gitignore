@@ -13,3 +13,6 @@ Docs/Examples/
 # Generated static demo site and release bundles
 /site/
 /dist/
+# Collected static files are built by the Dockerfile; keep only the folder itself
+app/staticfiles/*
+!app/staticfiles/.gitkeep

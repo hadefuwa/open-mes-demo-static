@@ -1,0 +1,21 @@
+# Render Blueprint: deploys the app from the Dockerfile and connects it to a Supabase database.
+# Secrets are never stored here: Render generates SECRET_KEY, and you paste DATABASE_URL in the dashboard.
+services:
+  - type: web
+    name: open-mes
+    runtime: docker
+    plan: starter
+    region: frankfurt
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "0"
+      - key: MES_REQUIRE_LOGIN
+        value: "1"
+      - key: TIME_ZONE
+        value: Europe/London
+      - key: DATABASE_URL
+        sync: false   # paste the Supabase connection string in the Render dashboard

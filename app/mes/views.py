@@ -6,6 +6,8 @@ from django.utils import timezone
 from django.shortcuts import get_object_or_404, redirect, render
 from django.views.decorators.http import require_POST
 
+from .permissions import require_role
+
 from . import views_defects
 from .models import (CustomerOrder, CustomerOrderLine, Defect, Event, ProductionTechnician, TestReport, Unit,
                      WorkOrder,
@@ -85,16 +87,19 @@ def _advance(request, pk, from_status, to_status, action):
 
 
 @require_POST
+@require_role("stock")
 def allocate(request, pk):
     return _advance(request, pk, WorkOrder.ENTERED, WorkOrder.ALLOCATED, "stock allocated")
 
 
 @require_POST
+@require_role("stock")
 def issue(request, pk):
     return _advance(request, pk, WorkOrder.ALLOCATED, WorkOrder.ISSUED, "stock issued")
 
 
 @require_POST
+@require_role("assign")
 def assign(request, pk):
     order = get_object_or_404(WorkOrder, pk=pk)
     technician = ProductionTechnician.objects.filter(pk=request.POST.get("technician")).first()
@@ -116,11 +121,13 @@ def print_sheet(request, pk):
 
 
 @require_POST
+@require_role("work")
 def start(request, pk):
     return _advance(request, pk, WorkOrder.ISSUED, WorkOrder.IN_PROGRESS, "started")
 
 
 @require_POST
+@require_role("work")
 def add_unit(request, pk):
     order = get_object_or_404(WorkOrder, pk=pk)
     serial = request.POST.get("serial", "").strip()
@@ -145,6 +152,7 @@ def add_unit(request, pk):
 
 
 @require_POST
+@require_role("work")
 def retest_unit(request, pk, unit_id):
     """Record a new result for a unit sent to rework (it is no longer first-pass)."""
     order = get_object_or_404(WorkOrder, pk=pk)
@@ -161,6 +169,7 @@ def retest_unit(request, pk, unit_id):
 
 
 @require_POST
+@require_role("work")
 def finish(request, pk):
     """ProductionTechnician finishes the build and test; the order moves to QA."""
     order = get_object_or_404(WorkOrder, pk=pk)
@@ -176,6 +185,7 @@ def finish(request, pk):
 
 
 @require_POST
+@require_role("qa")
 def approve(request, pk):
     """Team leader signs off QA and completes the order."""
     order = get_object_or_404(WorkOrder, pk=pk)
@@ -188,6 +198,7 @@ def approve(request, pk):
 
 
 @require_POST
+@require_role("qa")
 def reject(request, pk):
     """Team leader sends the order back to the technician."""
     order = get_object_or_404(WorkOrder, pk=pk)
@@ -210,6 +221,7 @@ def customer_order(request, pk):
 
 
 @require_POST
+@require_role("raise")
 def raise_work_order(request, pk, line_id):
     """Create a work order (status Entered) to fulfil one customer order line."""
     line = get_object_or_404(CustomerOrderLine, pk=line_id, order_id=pk)
@@ -357,3 +369,14 @@ def test_report(request, pk):
         "failed": sum(1 for s in sections for st in s["steps"] if st.result == "FAIL"),
         "pct": round(100 * passed / total) if total else 0,
     })
+
+
+def healthz(request):
+    """Liveness and database check for the host's health monitor (no sign-in needed)."""
+    from django.db import connection
+    from django.http import JsonResponse
+    try:
+        connection.ensure_connection()
+    except Exception:
+        return JsonResponse({"status": "database unavailable"}, status=503)
+    return JsonResponse({"status": "ok"})

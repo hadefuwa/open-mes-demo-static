@@ -86,3 +86,20 @@ def static_export(request):
 def project(request):
     """The repository URL shown in the footer."""
     return {"project_url": getattr(settings, "MES_PROJECT_URL", "")}
+
+
+def access(request):
+    """What the signed-in user may do (`can.qa`, `can.work` ...) and how to label them in the top bar."""
+    from . import permissions
+    user = getattr(request, "user", None)
+    if user is None:
+        return {"can": {action: True for action in permissions.ACTIONS}, "require_login": False, "role_label": ""}
+    names = permissions.role_names(user)
+    label = ""
+    if user.is_authenticated:
+        label = "Administrator" if user.is_superuser else ", ".join(sorted(names)) or "Viewer"
+    return {
+        "can": {action: permissions.allowed(user, action, names) for action in permissions.ACTIONS},
+        "require_login": settings.MES_REQUIRE_LOGIN,
+        "role_label": label,
+    }

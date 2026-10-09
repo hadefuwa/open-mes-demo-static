@@ -3,7 +3,9 @@ import random
 from datetime import date, datetime, time, timedelta
 from types import SimpleNamespace
 
+from django.conf import settings
 from django.core.management.base import BaseCommand, CommandError
+from django.db import connection
 from django.utils import timezone
 
 from mes import bom_import, classify, pricing
@@ -19,8 +21,14 @@ class Command(BaseCommand):
 
     def add_arguments(self, parser):
         parser.add_argument("--pack", help="data pack in mes/datapacks to load")
+        parser.add_argument("--force", action="store_true",
+                            help="wipe the database even though DEBUG is off or it is not SQLite")
 
-    def handle(self, *args, pack=None, **options):
+    def handle(self, *args, pack=None, force=False, **options):
+        if not force and (not settings.DEBUG or connection.vendor != "sqlite"):
+            raise CommandError(
+                f"seed WIPES the database ({connection.vendor}, DEBUG={settings.DEBUG}). Refusing to run against "
+                "what may be a production database; pass --force if you really mean it.")
         pack = load_pack(pack)
         self.stdout.write(f"Data pack: {pack.__name__.rsplit('.', 1)[-1]}")
         problems = check_pack(pack)

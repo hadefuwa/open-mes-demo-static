@@ -26,6 +26,10 @@ Repository family: this repo (open-mes-demo-static) is the static demo: the full
 - **Tables:** every list uses `mes/tables.py` `build_table` with `templates/mes/_table.html` (search, sort, pagination, `?format=csv`). `context.py` supplies the alert count and breadcrumbs.
 - **UI:** `base.html` is a sidebar shell with an inline SVG icon sprite and no external assets. The dashboard charts are hand-written SVG drawn by JS from `json_script` data built in `views.dashboard`.
 
+## Production and access
+
+Settings are environment-driven (`config/settings.py`, `.env.example`): `DATABASE_URL` (PostgreSQL, e.g. Supabase; otherwise SQLite), `DEBUG`, `SECRET_KEY` (required when `DEBUG=0`), `MES_REQUIRE_LOGIN`. Login is **off by default** so the demo and tests are open; with `MES_REQUIRE_LOGIN=1` the `LoginRequired` middleware sends anonymous visitors to `/login/` and POST actions are gated by role. Roles are Django groups created by migration 0013 (Planner, Technician, Team leader, Admin); `mes/permissions.py` maps each action (`stock`, `assign`, `work`, `qa`, `raise`, `machine`) to roles and `@require_role` guards the views; the `can.*` template variables hide buttons a role cannot use. `Event.actor` records the username through a context variable set by the `AuditUser` middleware. `seed` refuses to wipe a non-SQLite or `DEBUG=0` database without `--force`. Deployment (Docker, Render, Supabase): [Docs/DEPLOY.md](Docs/DEPLOY.md). To test against real PostgreSQL locally, `pip install pgserver` (embedded server; on Windows copy the `tzdata` zoneinfo folder into its `share/postgresql/timezone`).
+
 ## Data packs
 
 The software is generic; datasets are **packs** in `app/mes/datapacks/` (plain-data modules, see `generic.py` and the contract in `datapacks/__init__.py`). `seed` validates the pack (`check_pack`), builds the catalogue (`mes/demo/builder.py`), creates the demo activity the pack asks for, runs the pack's optional `load_real_data(command)`, then classifies items from BOM structure (`mes/classify.py`) and works out costs. The `mes/demo/<area>.py` hooks read their inputs from `ctx.pack`, so they contain no business data.

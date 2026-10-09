@@ -367,9 +367,18 @@ class Event(models.Model):
     action = models.CharField(max_length=50)
     detail = models.CharField(max_length=300, blank=True)
     source = models.CharField(max_length=20, default=OPERATOR)
+    actor = models.CharField(max_length=150, blank=True)  # username of whoever did it, when login is on
 
     class Meta:
         ordering = ["timestamp", "id"]
 
     def __str__(self):
         return f"{self.timestamp:%Y-%m-%d %H:%M} {self.work_order} {self.action}"
+
+    def save(self, *args, **kwargs):
+        if not self.actor:
+            from .middleware import current_user
+            user = current_user.get()
+            if user is not None:
+                self.actor = user.get_username()
+        super().save(*args, **kwargs)
