@@ -282,7 +282,7 @@
       </div>
     </header>
 
-    {% if static_export %}<div class="static-banner"><strong>Static demo.</strong> A read-only snapshot of Open-MES with dummy data. Browsing, search, sorting and CSV export work; buttons that change data are switched off. <a href="https://github.com/hadefuwa/Open-MES">Get the real app</a></div>{% endif %}
+    {% if static_export %}<div class="static-banner"><strong>Static demo.</strong> A read-only snapshot of Open-MES with dummy data. Browsing, search, sorting and CSV export work; buttons that change data are switched off. <a href="https://github.com/hadefuwa/open-mes-demo-server">Get the real app</a></div>{% endif %}
     <main>
       {% if breadcrumbs %}
       <nav class="crumbs" aria-label="Breadcrumb">
@@ -295,7 +295,7 @@
     <footer>
       <span class="live">Open-MES demo</span>
       <span>Synthetic data for demonstration only</span>
-      <span class="sp"><a href="https://github.com/hadefuwa/Open-MES">GitHub</a>{% if not static_export %}<a href="/admin/">Admin</a>{% endif %}<span>v0.1 demo</span></span>
+      <span class="sp"><a href="{{ project_url }}">GitHub</a>{% if not static_export %}<a href="/admin/">Admin</a>{% endif %}<span>v0.1 demo</span></span>
     </footer>
   </div>
 </div>

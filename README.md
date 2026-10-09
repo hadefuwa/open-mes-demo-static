@@ -4,7 +4,9 @@
 
 It runs out of the box on **dummy data** for an invented training-equipment maker, so you can click through every feature straight after cloning.
 
-**Try it without installing anything:** the [static demo](https://hadefuwa.github.io/Open-MES/) is a read-only copy that runs entirely in your browser (see [Docs/STATIC-DEMO.md](Docs/STATIC-DEMO.md)).
+**Live demo:** https://hadefuwa.github.io/open-mes-demo-static/ is a read-only copy that runs entirely in your browser, with no server and no database (see [Docs/STATIC-DEMO.md](Docs/STATIC-DEMO.md)).
+
+This repository is the **static demo**: the application code plus the builder that turns it into a static site. To run the real, editable app, use the companion repository [open-mes-demo-server](https://github.com/hadefuwa/open-mes-demo-server).
 
 ## Features
 

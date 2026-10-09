@@ -66,6 +66,7 @@ TEMPLATES = [
                 'mes.context.alerts',
                 'mes.context.breadcrumbs',
                 'mes.context.static_export',
+                'mes.context.project',
             ],
         },
     },
@@ -135,3 +136,5 @@ MES_DATA_DIR = Path(os.environ.get("MES_DATA_DIR") or BASE_DIR.parent / "data")
 
 # Set only by `manage.py build_static_site`: renders pages for the read-only static copy of the demo.
 MES_STATIC_EXPORT = False
+# Where "GitHub" links in the UI point (each repository sets its own).
+MES_PROJECT_URL = "https://github.com/hadefuwa/open-mes-demo-static"

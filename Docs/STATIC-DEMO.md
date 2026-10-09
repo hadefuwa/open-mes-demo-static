@@ -2,7 +2,7 @@
 
 A read-only copy of the app that runs in any browser with **no server and no database**. It is built from the generic dummy data, so it is safe to publish.
 
-Live: https://hadefuwa.github.io/Open-MES/
+Live: https://hadefuwa.github.io/open-mes-demo-static/
 
 ## What works
 

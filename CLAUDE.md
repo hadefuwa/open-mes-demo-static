@@ -15,6 +15,8 @@ Python may not be on PATH; use the venv (`.venv/Scripts/python.exe`). Run from `
 - `manage.py import_test_reports <workbook>`
 - `MES_DB=<path>` points Django at a different SQLite file (used for parallel workers); `MES_DATA_PACK` and `MES_DATA_DIR` choose the default pack and where real workbooks live.
 
+Repository family: this repo (open-mes-demo-static) is the static demo: the full application plus the static-site builder, published to GitHub Pages. `open-mes-demo-server` (its `upstream`) is the canonical runnable app: make application changes there first and merge them here with `git fetch upstream && git merge upstream/main`. Each repo's footer link comes from `MES_PROJECT_URL`.
+
 ## Architecture
 
 - **One catalogue table.** `Product` holds finished products, assemblies and components (`kind`, `category`, `range_name`, `unit_cost`, `rrp`, stock and supplier fields). `BomLine` links any item to any other, so everything cross-references. `RoutingStep` gives build time and the machine each step needs. Nearly every model has `created_at`/`updated_at` (`TimeStamped`).

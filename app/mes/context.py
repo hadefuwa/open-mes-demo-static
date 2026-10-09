@@ -81,3 +81,8 @@ def breadcrumbs(request):
 def static_export(request):
     """True while building the static GitHub Pages copy of the demo (see build_static_site)."""
     return {"static_export": bool(getattr(settings, "MES_STATIC_EXPORT", False))}
+
+
+def project(request):
+    """The repository URL shown in the footer."""
+    return {"project_url": getattr(settings, "MES_PROJECT_URL", "")}
